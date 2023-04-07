@@ -8,7 +8,7 @@ const MyAvatar = (props) => {
 export default MyAvatar;
 const styles = {
   MyAvatar: {
-    height: '75px',
+    height: '5ch',
     cursor: 'pointer',
     borderRadius: '50%',
   },

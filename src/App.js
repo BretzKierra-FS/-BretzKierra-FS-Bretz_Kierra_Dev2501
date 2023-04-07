@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 // Header
 import Header from './components/Header';
-// Images
-import MyAvatar from './components/MyAvatar';
-import AvatarIcon from './images/femaleIcon.jpg';
+// Nav
+import Nav from './components/Nav';
+
 class App extends Component {
   render() {
     return (
-      <div className="App" >
-        <Header />
-        
-        <div style={styles.box}>
-          <MyAvatar AvatarIcon={AvatarIcon} />
-          <img src={AvatarIcon} alt={'Icon'} style={styles.logo} />
+      <div className="App">
+        <Header placeholder={'Search'} />
+        <div style={styles.container}>
+          <Nav />
+          <div style={styles.main}>
+            <p>THE MAIN FORM</p>
+          </div>
+          <aside style={styles.ads}>
+            Advertisers
+            <p>Ads</p>
+            <p>Ads</p>
+            <p>Ads</p>
+          </aside>
         </div>
-        <div style={styles.box}></div>
       </div>
     );
   }
@@ -25,6 +31,18 @@ const styles = {
   container: {
     display: 'flex',
     felxDirection: 'row',
+    height: '100vh',
+    backgroundColor: '#BBE6E4',
+  },
+  main: {
+    display: 'flex',
+    flex: 2,
+    backgroundColor: 'red',
+
+    margin: '2rem',
+  },
+  ads: {
+    backgroundColor: 'blue',
   },
   logo: {
     height: '50px',
