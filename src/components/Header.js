@@ -3,6 +3,7 @@ import logo from '../images/logo.png';
 import MyAvatar from './MyAvatar';
 import AvatarIcon from '../images/femaleIcon.jpg';
 import { CgSearch, CgMenu } from 'react-icons/cg';
+import {CgCheck} from 'react-icons/cg'
 
 const Header = (props) => {
   return (
@@ -13,7 +14,9 @@ const Header = (props) => {
       <div style={styles.searchContainer}>
         <h1 style={styles.title}>Banana.Chat</h1>
         <form>
-          <CgSearch />
+          <button>
+            <CgSearch />
+          </button>
           <input
             type="search"
             style={styles.searchBox}
@@ -37,28 +40,28 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '1ch',
-    height: '12vh',
+    height: '8vh',
     backgroundColor: '#FFA3D1',
-    paddingLeft: '4ch',
-    paddingRight: '4ch',
-    color: '#F0F6F6',
-    fontSize: '.8rem',
+    paddingLeft: '2ch',
+    paddingRight: '2ch',
+    fontSize: '1rem',
   },
   logo: {
-    height: '10vh',
+    height: '7vh',
   },
   searchContainer: {
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
-    marginBottom: '3ch',
+    marginBottom: '2ch',
   },
   title: {
     fontSize: '1.5ch',
     marginBottom: '3ch',
+    color: '#F0F6F6',
   },
   searchBox: {
-    marginLeft: '2px',
+    paddingRight: '8rem',
   },
   rNav: {
     display: 'flex',
