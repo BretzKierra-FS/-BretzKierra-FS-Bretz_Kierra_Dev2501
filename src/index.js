@@ -11,14 +11,12 @@ root.render(
   </React.StrictMode>
 );
 
-//  color Pallet
+// Coolors Swatch
 // --indigo-dye: #084b83ff;
-// --aero: #42bfddff;
-// --mint-green: #bbe6e4ff;
+// --aero: #43bfdeff;
+// --mustard: #ffd744ff;
 // --antiflash-white: #f0f6f6ff;
 // --carnation-pink: #ffa3d1ff;
-
-
 
 
 // If you want to start measuring performance in your app, pass a function

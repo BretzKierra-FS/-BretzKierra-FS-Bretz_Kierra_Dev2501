@@ -3,7 +3,7 @@ import logo from '../images/logo.png';
 import MyAvatar from './MyAvatar';
 import AvatarIcon from '../images/femaleIcon.jpg';
 import { CgSearch, CgMenu } from 'react-icons/cg';
-import {CgCheck} from 'react-icons/cg'
+import { CgCheck } from 'react-icons/cg';
 
 const Header = (props) => {
   return (
@@ -25,7 +25,7 @@ const Header = (props) => {
         </form>
       </div>
       <div style={styles.rNav}>
-        <MyAvatar AvatarIcon={AvatarIcon} />
+        <MyAvatar AvatarIcon={AvatarIcon} style={styles.avatar} />
         <span>Kierra Bretz</span>
         <CgMenu style={styles.navFont} />
       </div>

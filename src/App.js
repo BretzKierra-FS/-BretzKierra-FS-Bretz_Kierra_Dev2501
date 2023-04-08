@@ -5,7 +5,9 @@ import Header from './components/Header';
 import Nav from './components/Nav';
 //form
 import Form from './components/Form';
-//button Icon
+// ads
+import Advertisement1 from './components/ads/Advertisement1';
+import Advertisement2 from './components/ads/Advertisement2';
 
 class App extends Component {
   render() {
@@ -19,9 +21,8 @@ class App extends Component {
           </div>
           <aside style={styles.ads}>
             Advertisers
-            <p>Ads</p>
-            <p>Ads</p>
-            <p>Ads</p>
+            <Advertisement1 />
+            <Advertisement2 />
           </aside>
         </div>
       </div>
@@ -34,7 +35,7 @@ const styles = {
   container: {
     display: 'flex',
     felxDirection: 'row',
-    height: '100vh',
+    height: '100% ',
     backgroundColor: '#084B83',
   },
   main: {
@@ -49,6 +50,8 @@ const styles = {
     flexDirection: 'column',
     backgroundColor: '#F0F6F6',
     width: '16%',
+    padding: '1rem',
+    textAlign: 'center',
   },
   logo: {
     height: '50px',

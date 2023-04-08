@@ -16,6 +16,6 @@ const styles = {
     backgroundColor: '#FFD744',
     borderRadius: '1rem',
     fontSize: '3rem',
-  
+    cursor: 'pointer',
   },
 };

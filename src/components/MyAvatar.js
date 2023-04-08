@@ -11,5 +11,6 @@ const styles = {
     height: '5ch',
     cursor: 'pointer',
     borderRadius: '50%',
+    padding: '.5rem',
   },
 };
