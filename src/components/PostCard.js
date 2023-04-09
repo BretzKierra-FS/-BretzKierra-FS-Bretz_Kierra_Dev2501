@@ -10,13 +10,13 @@ const PostCard = (props) => {
     <div>
       <div style={styles.PostCard}>
         <div style={styles.postCardTop}>
-          <MyAvatar AvatarIcon={AvatarIcon} />
-          <h6 style={styles.userName}>Steven Harris</h6>
+          <MyAvatar AvatarIcon={props.avatar} />
+          <h6 style={styles.userName}>{props.username}</h6>
           <ImCross style={styles.deletePost} />
         </div>
         <div>
-          <p>Today's lunch! Yum!</p>
-          <img src={image} style={styles.img} />
+          <p>{props.postText}</p>
+          <img src={props.image} style={styles.img} />
           <CgPen />
           <span>Edit</span>
         </div>
@@ -42,7 +42,7 @@ const styles = {
     display: 'flex',
   },
   deletePost: {
-    paddingLeft: '80%',
+    paddingLeft: '90%',
     cursor: 'pointer',
   },
   img: {

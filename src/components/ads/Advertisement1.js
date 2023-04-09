@@ -1,12 +1,11 @@
 import React from 'react';
-import ad1 from '../../images/ad1.png';
 const Advertisement1 = (props) => {
   return (
-    <aside style={styles.adContainer}>
-      <span>Baby Shield</span>
-      <img style={styles.ad1} src={ad1} />
-      <span>Anti splash sheild </span>
-    </aside>
+    <div style={styles.adContainer}>
+      <span>{props.title}</span>
+      <img style={styles.ad1} src={props.image} />
+      <span>{props.des} </span>
+    </div>
   );
 };
 
@@ -14,7 +13,7 @@ export default Advertisement1;
 
 const styles = {
   adContainer: {
-    height: '20vh',
+    height: '20%',
     margin: '.5rem',
     textAlign: 'center',
   },

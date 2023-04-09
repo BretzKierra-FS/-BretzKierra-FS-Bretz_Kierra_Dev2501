@@ -7,7 +7,8 @@ import Nav from './components/Nav';
 import Form from './components/Form';
 // ads
 import Advertisement1 from './components/ads/Advertisement1';
-import Advertisement2 from './components/ads/Advertisement2';
+import ad1 from '../src/images/ad1.png';
+import ad2 from '../src/images/ad2.png';
 
 class App extends Component {
   render() {
@@ -21,8 +22,16 @@ class App extends Component {
           </div>
           <aside style={styles.ads}>
             Advertisers
-            <Advertisement1 />
-            <Advertisement2 />
+            <Advertisement1
+              image={ad1}
+              title={'Baby Sheild'}
+              des={'Protection from oppsies!'}
+            />
+            <Advertisement1
+              image={ad2}
+              title={'Fresh Brand'}
+              des={'For a clean smile'}
+            />
           </aside>
         </div>
       </div>
@@ -37,9 +46,11 @@ const styles = {
     felxDirection: 'row',
     height: '100% ',
     backgroundColor: '#084B83',
+    justifyContent: 'space-between',
   },
   main: {
     display: 'flex',
+    justifyContent: 'center',
     flex: 2,
   },
   nav: {
@@ -52,6 +63,7 @@ const styles = {
     width: '16%',
     padding: '1rem',
     textAlign: 'center',
+    gap: '2rem',
   },
   logo: {
     height: '50px',

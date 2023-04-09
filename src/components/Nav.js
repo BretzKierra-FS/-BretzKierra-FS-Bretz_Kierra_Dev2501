@@ -20,7 +20,7 @@ const styles = {
     marginBottom: '1rem',
     backgroundColor: '#F0F6F6',
     borderRadius: '.75rem',
-    height: '20vh',
+    height: '30ch',
   },
   navLink: {
     backgroundColor: '#42BFDD',
