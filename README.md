@@ -1,1 +1,2 @@
-# The dev branch is for developing my web application.
+# 01_Components - This branch contains reusable components.
+# Buttons, ads, postCards, avatars and forms.
