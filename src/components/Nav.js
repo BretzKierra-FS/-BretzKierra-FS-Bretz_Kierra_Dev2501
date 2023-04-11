@@ -3,9 +3,9 @@ import React from 'react';
 const Nav = (props) => {
   return (
     <div style={styles.nav}>
-      <a style={styles.navLink}>Newsfeed</a>
-      <a style={styles.navLink}>Messages</a>
-      <a style={styles.navLink}>Watch</a>
+      <button style={styles.navLink}>Newsfeed</button>
+      <button style={styles.navLink}>Messages</button>
+      <button style={styles.navLink}>Watch</button>
     </div>
   );
 };

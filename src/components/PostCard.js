@@ -1,14 +1,14 @@
 import React from 'react';
 import MyAvatar from './MyAvatar';
-import AvatarIcon from '../images/avatar2.png';
+// import AvatarIcon from '../images/avatar2.png';
 import { ImCross } from 'react-icons/im';
 import { CgPen } from 'react-icons/cg';
-import image from '../images/food.png';
+// import image from '../images/food.png';
 
 const PostCard = (props) => {
   return (
-    <div>
-      <div style={styles.PostCard}>
+    // <div>
+      <article style={styles.PostCard}>
         <div style={styles.postCardTop}>
           <MyAvatar AvatarIcon={props.avatar} />
           <h6 style={styles.userName}>{props.username}</h6>
@@ -16,12 +16,12 @@ const PostCard = (props) => {
         </div>
         <div>
           <p>{props.postText}</p>
-          <img src={props.image} style={styles.img} />
+          <img src={props.image} style={styles.img} alt={props.pcAlt} />
           <CgPen />
           <span>Edit</span>
         </div>
-      </div>
-    </div>
+      </article>
+    // </div>
   );
 };
 export default PostCard;

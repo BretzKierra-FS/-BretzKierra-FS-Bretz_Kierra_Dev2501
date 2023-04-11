@@ -3,7 +3,7 @@ import logo from '../images/logo.png';
 import MyAvatar from './MyAvatar';
 import AvatarIcon from '../images/femaleIcon.jpg';
 import { CgSearch, CgMenu } from 'react-icons/cg';
-import { CgCheck } from 'react-icons/cg';
+// import { CgCheck } from 'react-icons/cg';
 
 const Header = (props) => {
   return (

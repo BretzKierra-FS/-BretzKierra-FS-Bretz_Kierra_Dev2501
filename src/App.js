@@ -9,16 +9,34 @@ import Form from './components/Form';
 import Advertisement1 from './components/ads/Advertisement1';
 import ad1 from '../src/images/ad1.png';
 import ad2 from '../src/images/ad2.png';
+//PostCard
+import PostCard from './components/PostCard';
+import postImage1 from './images/food.png'; //first post
+import avatar2 from './images/avatar2.png'; //first post
+import postImage2 from './images/postImage2.png'; //second post
+import avatar3 from './images/avatar3.png';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <Header placeholder={'Search'} />
         <div style={styles.container}>
           <Nav style={styles.nav} />
           <div style={styles.main}>
             <Form placeholder="Create a New Post..." />
+            <PostCard
+              avatar={avatar2}
+              username={'Steven Jones'}
+              postText={'My lunch today was amazing! Talk about food art!'}
+              image={postImage1}
+            />
+            <PostCard
+              avatar={avatar3}
+              username={'Jessica Myra'}
+              postText={'My husband is so good with the kids! Love you babe!'}
+              image={postImage2}
+            />
           </div>
           <aside style={styles.ads}>
             Advertisers
@@ -51,6 +69,7 @@ const styles = {
   main: {
     display: 'flex',
     justifyContent: 'center',
+    flexDirection: 'column',
     flex: 2,
   },
   nav: {

@@ -3,12 +3,7 @@ import Button from './buttons/Button';
 import { CgCheck } from 'react-icons/cg';
 import MyAvatar from './MyAvatar';
 import AvatarIcon from '../images/femaleIcon.jpg';
-//PostCard
-import PostCard from './PostCard';
-import postImage1 from '../images/food.png'; //first post
-import avatar2 from '../images/avatar2.png'; //first post
-import postImage2 from '../images/postImage2.png'; //second post
-import avatar3 from '../images/avatar3.png';
+
 const Form = (props) => {
   return (
     <div style={styles.main}>
@@ -30,18 +25,6 @@ const Form = (props) => {
           <p>Whats on your mind, Kierra?</p>
         </div>
       </div>
-      <PostCard
-        avatar={avatar2}
-        username={'Steven Jones'}
-        postText={'My lunch today was amazing! Talk about food art!'}
-        image={postImage1}
-      />
-      <PostCard
-        avatar={avatar3}
-        username={'Jessica Myra'}
-        postText={'My husband is so good with the kids! Love you babe!'}
-        image={postImage2}
-      />
     </div>
   );
 };
