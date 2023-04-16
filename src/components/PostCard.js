@@ -10,13 +10,13 @@ const PostCard = (props) => {
     // <div>
     <article style={styles.PostCard}>
       <div style={styles.postCardTop}>
-        <MyAvatar AvatarIcon={props.avatar} />
-        <h6 style={styles.userName}>{props.username}</h6>
+        <MyAvatar AvatarIcon={props.val.pAvatar} />
+        <h6 style={styles.userName}>{props.val.pName}</h6>
         <ImCross style={styles.deletePost} />
       </div>
       <div>
-        <p>{props.postText}</p>
-        <img src={props.image} style={styles.img} alt={props.pcAlt} />
+        <p>{props.val.pText}</p>
+        <img src={props.val.pImage} style={styles.img} alt={props.val.alt} />
         <CgPen />
         <span>Edit</span>
       </div>

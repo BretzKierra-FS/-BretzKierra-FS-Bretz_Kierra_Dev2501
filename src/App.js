@@ -15,9 +15,34 @@ import postImage1 from './images/food.png'; //first post
 import avatar2 from './images/avatar2.png'; //first post
 import postImage2 from './images/postImage2.png'; //second post
 import avatar3 from './images/avatar3.png';
+import { element } from 'prop-types';
 
 class App extends Component {
+  state = {
+    //Array to store list items
+    pList: [
+      {
+        pName: 'Athen Bretz',
+        pAvatar: avatar2,
+        pText: 'My lunch today was amazing! Talk about food art!',
+        pImage: postImage1,
+        pAlt: '404 No Image',
+      },
+      {
+        pName: 'Jesse Myra',
+        pAvatar: avatar3,
+        pText: 'My husband is so good with the kids! Love you babe!',
+        pImage: postImage2,
+        pAlt: '404 No Image',
+      },
+    ],
+  };
   render() {
+    //The map fuction array.map(function(currentValue, index, arguement), this Value)
+    let postList = this.state.pList.map((element, index) => {
+      //pass through the key value from props
+      return <PostCard key={index} val={element} />;
+    });
     return (
       <div>
         <Header placeholder={'Search'} />
@@ -25,18 +50,7 @@ class App extends Component {
           <Nav style={styles.nav} />
           <div style={styles.main}>
             <Form placeholder="Create a New Post..." />
-            <PostCard
-              avatar={avatar2}
-              username={'Steven Jones'}
-              postText={'My lunch today was amazing! Talk about food art!'}
-              image={postImage1}
-            />
-            <PostCard
-              avatar={avatar3}
-              username={'Jessica Myra'}
-              postText={'My husband is so good with the kids! Love you babe!'}
-              image={postImage2}
-            />
+            {postList}
           </div>
           <aside style={styles.ads}>
             Advertisers
