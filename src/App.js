@@ -17,7 +17,6 @@ import postImage2 from './images/postImage2.png'; //second post
 import avatar3 from './images/avatar3.png';
 import AvatarIcon from './images/femaleIcon.jpg';
 import placeholderImg from './images/placeholder.png';
-//import { element } from 'prop-types';
 
 class App extends Component {
   state = {
@@ -40,7 +39,22 @@ class App extends Component {
         index: 1,
       },
     ],
+    color: '#FFA3D1',
   };
+
+  //LifeCycles
+  // Mounthing(ComponentDidMount), Updating(ComponentDidUpdate), Unmounting(ComponentWillUnmount)
+
+  componentDidMount() {
+    //runs after the first render() lifecycle
+    console.log('componentDidMount() lifecycle');
+    //changes the state after 2 secs
+    //form the time when the component is rendered
+    setTimeout(() => {
+      this.setState({ color: '#084B83' });
+    }, 5000);
+  }
+
   // Fuction for input values
   getInput = (e) => {
     this.setState({ pText: e.target.value });
@@ -56,6 +70,7 @@ class App extends Component {
           pName: 'Kierra bretz',
           pAvatar: AvatarIcon,
           pImage: placeholderImg,
+          index: this.state.pList.length, ///Thought this would fix filter()
         },
       ],
     });
@@ -63,7 +78,7 @@ class App extends Component {
     e.target.reset();
   };
 
-  // Delete Function
+  // Delete Function splice is not a good method to use
   // removeItem = (key) => {
   //   const newPList = [...this.state.pList];
   //   newPList.splice(key, 1);
@@ -75,17 +90,20 @@ class App extends Component {
   removeItem = (key) => {
     console.log(key);
     let newPList = [...this.state.pList];
-
+    //Note to Professor: I hard coded this to get it to work.
+    //Do you know a better way to use
     console.log(newPList);
     this.setState({
       pList: this.state.pList.filter((item) => item.index !== key),
     });
   };
 
-  //edit Item
-  editItem = (element) => {};
+  //edit Item, wanted to add this! was running out of time.
+  //editItem = (element) => {};
 
   render() {
+    console.log('Render Lifecycle'); //To help understand concept.
+    console.log(this.state.color);
     //The map fuction array.map(function(currentValue, index, arguement), this Value)
     let postList = this.state.pList.map((element, index) => {
       //pass through the key value from props
@@ -119,6 +137,7 @@ class App extends Component {
               des={'Protection from oppsies!'}
               adAlt={'404'}
             />
+            <h2 style={{ color: `${this.state.color}` }}>Banana.Chat</h2>
             <Advertisement1
               image={ad2}
               title={'Fresh Brand'}

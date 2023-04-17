@@ -24,6 +24,6 @@ const ButtonStyle = styled.button`
   border-radius: 20%;
   margin-left: 1rem;
   &:hover {
-    background: orange;
+    background: {props.backColor};
   }
 `;

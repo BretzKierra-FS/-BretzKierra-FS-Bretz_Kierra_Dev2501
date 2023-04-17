@@ -32,9 +32,10 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     backgroundColor: 'white',
-    width: '90%',
+    width: '87%',
     margin: '1rem',
     borderRadius: '.75rem',
+    padding: '1rem',
 
     filter:
       'drop-shadow(0 10px 13px rgb(0 0 0 / 0.1)) drop-shadow(0 5px 5px rgb(0 0 0 / 0.08))',
