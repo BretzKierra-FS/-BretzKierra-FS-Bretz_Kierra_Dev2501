@@ -12,12 +12,12 @@ const PostCard = (props) => {
       <div style={styles.postCardTop}>
         <MyAvatar AvatarIcon={props.val.pAvatar} />
         <h6 style={styles.userName}>{props.val.pName}</h6>
-        <ImCross style={styles.deletePost} />
+        <ImCross onClick={props.delMe} style={styles.deletePost} />
       </div>
       <div>
         <p>{props.val.pText}</p>
         <img src={props.val.pImage} style={styles.img} alt={props.val.alt} />
-        <CgPen />
+        <CgPen onClick={props.editMe} />
         <span>Edit</span>
       </div>
     </article>
@@ -43,7 +43,7 @@ const styles = {
     display: 'flex',
   },
   deletePost: {
-    paddingLeft: '90%',
+    paddingLeft: '75%',
     cursor: 'pointer',
   },
   img: {

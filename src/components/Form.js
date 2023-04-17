@@ -8,8 +8,11 @@ const Form = (props) => {
   return (
     <div style={styles.main}>
       <div style={styles.newPostContainer}>
-        <form style={styles.form}>
+        <form style={styles.form} onSubmit={props.addItem}>
           <input
+            name="pText"
+            value={props.pText}
+            onChange={props.getInput}
             type="text"
             style={styles.postInput}
             placeholder={props.placeholder}
