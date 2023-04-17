@@ -1,2 +1,1 @@
-# 01_Components - This branch contains reusable components.
-# Buttons, ads, postCards, avatars and forms.
+# 02_Components - This branch adds new post functions, delete post function, State arrays and lifecycle.
