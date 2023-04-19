@@ -89,13 +89,16 @@ class App extends Component {
 
   removeItem = (key) => {
     console.log(key);
-    let newPList = [...this.state.pList];
+    // let newPList = [...this.state.pList];
     //Note to Professor: I hard coded this to get it to work.
     //Do you know a better way to use
-    console.log(newPList);
-    this.setState({
-      pList: this.state.pList.filter((item) => item.index !== key),
-    });
+    // console.log(newPList);
+    // this.setState({
+    //   pList: this.state.pList.filter((item) => item.index !== key),
+    // });
+    //The filter method does not mutate the state
+    const updatedList = this.state.pList.filter((element, item) => item !== key)
+      this.setState({pList:updatedList})
   };
 
   //edit Item, wanted to add this! was running out of time.
