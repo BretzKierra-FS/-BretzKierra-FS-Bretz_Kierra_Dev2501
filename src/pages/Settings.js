@@ -1,15 +1,15 @@
 import React from 'react';
 
-function DashBoard() {
+function Settings() {
   return (
     <section style={styles.container}>
       <p>Logo Placeholder</p>
-      <h1>Dashboard</h1>
+      <h1>Settings</h1>
       <p>Place your chart here</p>
     </section>
   );
 }
-export default DashBoard;
+export default Settings;
 
 const styles = {
   container: {

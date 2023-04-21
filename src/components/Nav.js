@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom';
 const Nav = (props) => {
   return (
     <div style={styles.nav}>
+      <Link to="DashBoard" style={styles.navLink}>
+        DashBoard
+      </Link>
       <Link to="Newsfeed" style={styles.navLink}>
         Newsfeed
       </Link>
       <Link to="Messages" style={styles.navLink}>
         Messages
       </Link>
-      <Link to="Watch" style={styles.navLink}>
-        Watch
+      <Link to="Settings" style={styles.navLink}>
+        Settings
       </Link>
     </div>
   );
@@ -26,7 +29,7 @@ const styles = {
     marginBottom: '1rem',
     backgroundColor: '#F0F6F6',
     borderRadius: '.75rem',
-    height: '30ch',
+    height: '40ch',
   },
   navLink: {
     backgroundColor: '#42BFDD',

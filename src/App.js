@@ -3,49 +3,20 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 // Nav
 import Nav from './components/Nav';
-//form
-//import Form from './components/Form';
 // ads
 import Advertisement1 from './components/ads/Advertisement1';
 import ad1 from '../src/images/ad1.png';
 import ad2 from '../src/images/ad2.png';
-//PostCard
-import PostCard from './components/PostCard';
-import postImage1 from './images/food.png'; //first post
-import avatar2 from './images/avatar2.png'; //first post
-import postImage2 from './images/postImage2.png'; //second post
-import avatar3 from './images/avatar3.png';
-import AvatarIcon from './images/femaleIcon.jpg';
-import placeholderImg from './images/placeholder.png';
 
-/////
 // Import React Routes
 import { Route, Routes } from 'react-router-dom';
 import NewsFeed from './pages/NewsFeed';
+import Messages from './pages/Messages';
+import Settings from './pages/Settings';
+import DashBoard from './pages/DashBoard';
 
 class App extends Component {
   state = {
-    //Array to store list items
-    pList: [
-      {
-        pName: 'Athen Bretz',
-        pAvatar: avatar2,
-        pTitle: 'Lunch',
-        pText: 'My lunch today was amazing! Talk about food art!',
-        pImage: postImage1,
-        pAlt: '404 No Image',
-        index: 0,
-      },
-      {
-        pName: 'Jesse Myra',
-        pAvatar: avatar3,
-        pTitle: 'Family',
-        pText: 'My husband is so good with the kids! Love you babe!',
-        pImage: postImage2,
-        pAlt: '404 No Image',
-        index: 1,
-      },
-    ],
     color: '#FFA3D1',
   };
 
@@ -75,6 +46,9 @@ class App extends Component {
             <Routes>
               <Route path="/" element={<NewsFeed />} />
               <Route path="NewsFeed" element={<NewsFeed />} />
+              <Route path="Messages" element={<Messages />} />
+              <Route path="Settings" element={<Settings />} />
+              <Route path="DashBoard" element={<DashBoard />} />
             </Routes>
           </main>
           <aside style={styles.ads}>
