@@ -1,11 +1,17 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Nav = (props) => {
   return (
     <div style={styles.nav}>
-      <button style={styles.navLink}>Newsfeed</button>
-      <button style={styles.navLink}>Messages</button>
-      <button style={styles.navLink}>Watch</button>
+      <Link to="Newsfeed" style={styles.navLink}>
+        Newsfeed
+      </Link>
+      <Link to="Messages" style={styles.navLink}>
+        Messages
+      </Link>
+      <Link to="Watch" style={styles.navLink}>
+        Watch
+      </Link>
     </div>
   );
 };

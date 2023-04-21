@@ -1,3 +1,5 @@
+///This file is for My notes On the app.js
+
 import React, { Component } from 'react';
 // Header
 import Header from './components/Header';
@@ -50,7 +52,7 @@ class App extends Component {
   };
 
   //LifeCycles
-  // Mounting(ComponentDidMount), Updating(ComponentDidUpdate), Unmounting(ComponentWillUnmount)
+  // Mounthing(ComponentDidMount), Updating(ComponentDidUpdate), Unmounting(ComponentWillUnmount)
 
   componentDidMount() {
     //runs after the first render() lifecycle
@@ -62,21 +64,86 @@ class App extends Component {
     }, 5000);
   }
 
+  // Fuction for input values
+  getInput = (e) => {
+    this.setState({ [e.target.name]: e.target.value }); //Yes! For multiple input fields.
+
+    // this.setState({ pText: e.target.value, pTitle: e.target.value }); //no
+  };
+  // add function
+  addItem = (e) => {
+    e.preventDefault();
+    this.setState({
+      pList: [
+        ...this.state.pList,
+        {
+          pTitle: this.state.pTitle,
+          pText: this.state.pText,
+          pName: 'Kierra bretz',
+          pAvatar: AvatarIcon,
+          pImage: placeholderImg,
+          index: this.state.pList.length, ///Thought this would fix filter()
+        },
+      ],
+    });
+    //clear
+    e.target.reset();
+  };
+
+  // Delete Function splice is not a good method to use
+  // removeItem = (key) => {
+  //   const newPList = [...this.state.pList];
+  //   newPList.splice(key, 1);
+  //   this.setState(() => ({
+  //     pList: newPList,
+  //   }));
+  // };
+
+  removeItem = (key) => {
+    console.log(key);
+    // let newPList = [...this.state.pList];
+    //Note to Professor: I hard coded this to get it to work.
+    //Do you know a better way to use
+    // console.log(newPList);
+    // this.setState({
+    //   pList: this.state.pList.filter((item) => item.index !== key),
+    // });
+    //The filter method does not mutate the state
+    const updatedList = this.state.pList.filter(
+      (element, item) => item !== key
+    );
+    this.setState({ pList: updatedList });
+  };
+
+  //edit Item, wanted to add this! was running out of time.
+  //editItem = (element) => {};
+
   render() {
     console.log('Render Lifecycle'); //To help understand concept.
     console.log(this.state.color);
+    //The map fuction array.map(function(currentValue, index, arguement), this Value)
+    let postList = this.state.pList.map((element, index) => {
+      //pass through the key value from props
+      return (
+        <PostCard
+          key={index}
+          val={element}
+          delMe={() => this.removeItem(index)}
+          //editMe={() => this.editItem(element)}
+        />
+      );
+    });
 
     return (
       <div>
         <Header placeholder={'Search'} />
         <div style={styles.container}>
           <Nav style={styles.nav} />
-          <main style={styles.main}>
+          <div style={styles.main}>
             <Routes>
-              <Route path="/" element={<NewsFeed />} />
               <Route path="NewsFeed" element={<NewsFeed />} />
             </Routes>
-          </main>
+          </div>
           <aside style={styles.ads}>
             Advertisers
             <Advertisement1
