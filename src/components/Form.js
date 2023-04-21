@@ -9,6 +9,14 @@ const Form = (props) => {
     <div style={styles.main}>
       <div style={styles.newPostContainer}>
         <form style={styles.form} onSubmit={props.addItem}>
+        <input
+            name="pTitle"
+            value={props.pTitle}
+            onChange={props.getInput}
+            type="text"
+            style={styles.postInput}
+            placeholder={props.titlePlaceholder}
+          ></input>
           <input
             name="pText"
             value={props.pText}

@@ -15,6 +15,7 @@ const PostCard = (props) => {
         <ImCross onClick={props.delMe} style={styles.deletePost} />
       </div>
       <div>
+        <p style={styles.title}>{props.val.pTitle}</p>
         <p>{props.val.pText}</p>
         <img src={props.val.pImage} style={styles.img} alt={props.val.alt} />
         <CgPen onClick={props.editMe} />
@@ -44,11 +45,15 @@ const styles = {
     display: 'flex',
   },
   deletePost: {
-    paddingLeft: '75%',
+    position: 'fixed',
+    paddingLeft: '90%',
     cursor: 'pointer',
   },
   img: {
     display: 'block',
     width: '100%',
+  },
+  title: {
+    fontWeight: '800',
   },
 };

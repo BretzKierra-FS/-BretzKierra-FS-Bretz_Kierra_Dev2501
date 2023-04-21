@@ -25,6 +25,7 @@ class App extends Component {
       {
         pName: 'Athen Bretz',
         pAvatar: avatar2,
+        pTitle: 'Lunch',
         pText: 'My lunch today was amazing! Talk about food art!',
         pImage: postImage1,
         pAlt: '404 No Image',
@@ -33,6 +34,7 @@ class App extends Component {
       {
         pName: 'Jesse Myra',
         pAvatar: avatar3,
+        pTitle: 'Family',
         pText: 'My husband is so good with the kids! Love you babe!',
         pImage: postImage2,
         pAlt: '404 No Image',
@@ -57,7 +59,9 @@ class App extends Component {
 
   // Fuction for input values
   getInput = (e) => {
-    this.setState({ pText: e.target.value });
+    this.setState({ [e.target.name]: e.target.value }); //Yes! For multiple input fields.
+
+    // this.setState({ pText: e.target.value, pTitle: e.target.value }); //no
   };
   // add function
   addItem = (e) => {
@@ -66,6 +70,7 @@ class App extends Component {
       pList: [
         ...this.state.pList,
         {
+          pTitle: this.state.pTitle,
           pText: this.state.pText,
           pName: 'Kierra bretz',
           pAvatar: AvatarIcon,
@@ -97,8 +102,10 @@ class App extends Component {
     //   pList: this.state.pList.filter((item) => item.index !== key),
     // });
     //The filter method does not mutate the state
-    const updatedList = this.state.pList.filter((element, item) => item !== key)
-      this.setState({pList:updatedList})
+    const updatedList = this.state.pList.filter(
+      (element, item) => item !== key
+    );
+    this.setState({ pList: updatedList });
   };
 
   //edit Item, wanted to add this! was running out of time.
@@ -127,6 +134,7 @@ class App extends Component {
           <div style={styles.main}>
             <Form
               placeholder="Create a New Post..."
+              titlePlaceholder="Title"
               getInput={this.getInput}
               addItem={this.addItem}
             />
