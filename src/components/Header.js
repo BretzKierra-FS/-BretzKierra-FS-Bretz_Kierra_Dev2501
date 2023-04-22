@@ -3,6 +3,7 @@ import logo from '../images/logo.png';
 import MyAvatar from './MyAvatar';
 import AvatarIcon from '../images/femaleIcon.jpg';
 import { CgSearch, CgMenu } from 'react-icons/cg';
+import { Link } from 'react-router-dom/dist';
 // import { CgCheck } from 'react-icons/cg';
 
 const Header = (props) => {
@@ -26,6 +27,7 @@ const Header = (props) => {
       </div>
       <div style={styles.rNav}>
         <MyAvatar AvatarIcon={AvatarIcon} style={styles.avatar} />
+        <Link to="Settings">Settings</Link>
         <span>Kierra Bretz</span>
         <CgMenu style={styles.navFont} />
       </div>
