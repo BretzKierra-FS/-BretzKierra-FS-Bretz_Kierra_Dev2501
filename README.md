@@ -1,1 +1,11 @@
-# 02_Components - This branch adds new post functions, delete post function, State arrays and lifecycle.
+# 03_Routing - This branch added useState, Hooks, page page components and Recharts.
+
+### Added Pages
+ - Dashboard
+ - Newsfeed
+ - Settings
+ - Messages
+
+### Added components
+- ContactCard
+- MessageBox
