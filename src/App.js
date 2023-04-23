@@ -87,7 +87,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
-    flex: 2,
+    width: '60%',
   },
   nav: {
     display: 'flex',

@@ -53,7 +53,7 @@ const data = [
 const Chart2 = ({ viewChart }) => {
   return (
     <div key={viewChart.id} style={styles.chart}>
-      <h4>{viewChart.topTitle}</h4>
+      <h4 style={styles.chartTitles}>{viewChart.topTitle}</h4>
 
       <ResponsiveContainer width="100%" height={100}>
         <LineChart
@@ -75,7 +75,7 @@ const Chart2 = ({ viewChart }) => {
           <Line type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
         </LineChart>
       </ResponsiveContainer>
-      <p>{viewChart.bottomTitle}</p>
+      <h4 style={styles.chartTitles}>{viewChart.bottomTitle}</h4>
 
       <ResponsiveContainer width="100%" height={100}>
         <LineChart
@@ -111,6 +111,10 @@ const styles = {
     margin: '1rem',
     backgroundColor: '#F0F6F6',
     borderRadius: '.75rem',
-    paddingBottom: '1rem',
+    paddingBottom: '0.5rem',
+    paddingTop: '0.5rem',
+  },
+  chartTitles: {
+    margin: '1rem',
   },
 };
