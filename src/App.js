@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+
 // Header
 import Header from './components/Header';
 // Nav

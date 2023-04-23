@@ -17,7 +17,7 @@ root.render(
 // Coolors Swatch
 // --indigo-dye: #084b83ff;
 // --aero: #43bfdeff;
-// --mustard: #ffd744ff;
+// --mustard: ;
 // --antiflash-white: #f0f6f6ff;
 // --carnation-pink: #ffa3d1ff;
 
