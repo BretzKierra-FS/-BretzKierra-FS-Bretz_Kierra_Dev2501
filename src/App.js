@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 
 // Header
 import Header from './components/Header';
@@ -14,7 +14,7 @@ import { Route, Routes } from 'react-router-dom';
 import NewsFeed from './pages/NewsFeed';
 import Messages from './pages/Messages';
 import Settings from './pages/Settings';
-import DashBoard from './pages/DashBoard';
+import DashBoard from './pages/Dashboard';
 
 class App extends Component {
   state = {
