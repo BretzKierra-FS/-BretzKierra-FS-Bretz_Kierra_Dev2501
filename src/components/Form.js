@@ -9,7 +9,7 @@ const Form = (props) => {
     <div style={styles.main}>
       <div style={styles.newPostContainer}>
         <form style={styles.form} onSubmit={props.addItem}>
-        <input
+          <input
             name="pTitle"
             value={props.pTitle}
             onChange={props.getInput}
@@ -32,7 +32,7 @@ const Form = (props) => {
           ></Button>
         </form>
         <div style={styles.newPostBottom}>
-          <MyAvatar AvatarIcon={AvatarIcon} />
+          <MyAvatar AvatarIcon={props.avatar} />
           <p>Whats on your mind, Kierra?</p>
         </div>
       </div>

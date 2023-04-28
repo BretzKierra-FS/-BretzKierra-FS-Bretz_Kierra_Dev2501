@@ -1,4 +1,4 @@
-import React, { useState, useEffect, setState } from 'react';
+import React, { useState, useEffect } from 'react';
 // Header
 import Header from './components/Header';
 // Nav
@@ -17,15 +17,33 @@ import DashBoard from './pages/DashBoard';
 
 function App() {
   let [color, setColor] = useState('#FFA3D1');
+  const [userData, setUserData] = useState(null); //need the null otherwise return will not find props
+
   useEffect(() => {
-    setTimeout(() => {
-      setColor('#084B83');
-    }, 5000);
-  });
+    async function fetchAPI() {
+      const res = await fetch('https://randomuser.me/api/');
+      const data = await res.json();
+      const [user] = data.results;
+      console.log(user);
+
+      setTimeout(() => {
+        setColor('#084B83');
+      }, 5000);
+
+      setUserData(user);
+    }
+    fetchAPI();
+  }, []);
 
   return (
     <div>
-      <Header placeholder={'Search'} />
+      {userData && (
+        <Header
+          placeholder={'Search'}
+          userName={userData.name.first}
+          avatar={userData.picture.thumbnail}
+        />
+      )}
       <div style={styles.container}>
         <Nav style={styles.nav} />
         <main style={styles.main}>
