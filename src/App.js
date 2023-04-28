@@ -47,13 +47,18 @@ function App() {
       <div style={styles.container}>
         <Nav style={styles.nav} />
         <main style={styles.main}>
-          <Routes>
-            <Route path="/" element={<NewsFeed />} />
-            <Route path="NewsFeed" element={<NewsFeed />} />
-            <Route path="Messages" element={<Messages />} />
-            <Route path="Settings" element={<Settings />} />
-            <Route path="DashBoard" element={<DashBoard />} />
-          </Routes>
+          {userData && (
+            <Routes>
+              <Route
+                path="/"
+                element={<NewsFeed avatar={userData.picture.thumbnail} />}
+              />
+              <Route path="NewsFeed" element={<NewsFeed />} />
+              <Route path="Messages" element={<Messages />} />
+              <Route path="Settings" element={<Settings />} />
+              <Route path="DashBoard" element={<DashBoard />} />
+            </Routes>
+          )}
         </main>
         <aside style={styles.ads}>
           Advertisers

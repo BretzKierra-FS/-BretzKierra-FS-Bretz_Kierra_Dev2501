@@ -82,7 +82,7 @@ class NewsFeed extends Component {
     return (
       <div>
         <Form
-        avatar=
+          avatar={avatar2}
           placeholder="Create a New Post..."
           titlePlaceholder="Title"
           getInput={this.getInput}
