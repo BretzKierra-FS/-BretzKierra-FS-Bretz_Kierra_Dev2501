@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-
+import React, { useState, useEffect, setState } from 'react';
 // Header
 import Header from './components/Header';
 // Nav
@@ -16,62 +15,47 @@ import Messages from './pages/Messages';
 import Settings from './pages/Settings';
 import DashBoard from './pages/DashBoard';
 
-class App extends Component {
-  state = {
-    color: '#FFA3D1',
-  };
-
-  //LifeCycles
-  // Mounting(ComponentDidMount), Updating(ComponentDidUpdate), Unmounting(ComponentWillUnmount)
-
-  componentDidMount() {
-    //runs after the first render() lifecycle
-    console.log('componentDidMount() lifecycle');
-    //changes the state after 2 secs
-    //form the time when the component is rendered
+function App() {
+  let [color, setColor] = useState('#FFA3D1');
+  useEffect(() => {
     setTimeout(() => {
-      this.setState({ color: '#084B83' });
+      setColor('#084B83');
     }, 5000);
-  }
+  });
 
-  render() {
-    console.log('Render Lifecycle'); //To help understand concept.
-    console.log(this.state.color);
-
-    return (
-      <div>
-        <Header placeholder={'Search'} />
-        <div style={styles.container}>
-          <Nav style={styles.nav} />
-          <main style={styles.main}>
-            <Routes>
-              <Route path="/" element={<NewsFeed />} />
-              <Route path="NewsFeed" element={<NewsFeed />} />
-              <Route path="Messages" element={<Messages />} />
-              <Route path="Settings" element={<Settings />} />
-              <Route path="DashBoard" element={<DashBoard />} />
-            </Routes>
-          </main>
-          <aside style={styles.ads}>
-            Advertisers
-            <Advertisement1
-              image={ad1}
-              title={'Baby Sheild'}
-              des={'Protection from oppsies!'}
-              adAlt={'404'}
-            />
-            <h2 style={{ color: `${this.state.color}` }}>Banana.Chat</h2>
-            <Advertisement1
-              image={ad2}
-              title={'Fresh Brand'}
-              des={'For a clean smile'}
-              adAlt={'404'}
-            />
-          </aside>
-        </div>
+  return (
+    <div>
+      <Header placeholder={'Search'} />
+      <div style={styles.container}>
+        <Nav style={styles.nav} />
+        <main style={styles.main}>
+          <Routes>
+            <Route path="/" element={<NewsFeed />} />
+            <Route path="NewsFeed" element={<NewsFeed />} />
+            <Route path="Messages" element={<Messages />} />
+            <Route path="Settings" element={<Settings />} />
+            <Route path="DashBoard" element={<DashBoard />} />
+          </Routes>
+        </main>
+        <aside style={styles.ads}>
+          Advertisers
+          <Advertisement1
+            image={ad1}
+            title={'Baby Sheild'}
+            des={'Protection from oppsies!'}
+            adAlt={'404'}
+          />
+          <h2 style={{ color: `${color}` }}>Banana.Chat</h2>
+          <Advertisement1
+            image={ad2}
+            title={'Fresh Brand'}
+            des={'For a clean smile'}
+            adAlt={'404'}
+          />
+        </aside>
       </div>
-    );
-  }
+    </div>
+  );
 }
 export default App;
 

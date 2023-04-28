@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import User from '../components/User';
+
 
 function Settings() {
+
+
   return (
-    <section style={styles.container}>
-      <p>Logo Placeholder</p>
-      <h1>Settings</h1>
-      <p>Place your chart here</p>
-    </section>
+    <main style={styles.container}>
+   
+    </main>
   );
 }
 export default Settings;
