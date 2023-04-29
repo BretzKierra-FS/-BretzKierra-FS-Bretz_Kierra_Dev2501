@@ -8,7 +8,7 @@ import avatar3 from '../images/femaleIcon.jpg';
 
 function Messages() {
   const [card] = useState([
-    { avatar: avatar1, userName: 'Sam Mire' },
+    { avatar: { avatar1 }, userName: 'Sam Mire' },
     { avatar: avatar2, userName: 'Wesley Huges' },
     { avatar: avatar3, userName: 'Sam Mire' },
     { avatar: avatar1, userName: 'Jeff OverLoft' },

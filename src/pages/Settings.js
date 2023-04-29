@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import User from '../components/User';
 
-
-function Settings() {
-
-
+function Settings(props) {
   return (
     <main style={styles.container}>
-   
+      <User
+        firstName={props.firstName}
+        lastName={props.lastName}
+        avatar={props.avatar}
+        userName={props.userName}
+        phone={props.phone}
+        password={props.password}
+        streetNumber={props.steet}
+        streetName={props.streetName}
+        city={props.city}
+        state={props.state}
+        postcode={props.postcode}
+      />
     </main>
   );
 }

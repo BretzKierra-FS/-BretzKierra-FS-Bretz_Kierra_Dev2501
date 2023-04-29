@@ -49,13 +49,27 @@ function App() {
         <main style={styles.main}>
           {userData && (
             <Routes>
-              <Route
-                path="/"
-                element={<NewsFeed avatar={userData.picture.thumbnail} />}
-              />
+              <Route path="/" element={<NewsFeed />} />
               <Route path="NewsFeed" element={<NewsFeed />} />
               <Route path="Messages" element={<Messages />} />
-              <Route path="Settings" element={<Settings />} />
+              <Route
+                path="Settings"
+                element={
+                  <Settings
+                    avatar={userData.picture.large}
+                    firstName={userData.name.first}
+                    lastName={userData.name.last}
+                    userName={userData.login.username}
+                    phone={userData.registered.phone}
+                    password={userData.login.password}
+                    streetNumber={userData.location.street.number}
+                    streetName={userData.location.street.name}
+                    city={userData.location.city}
+                    state={userData.location.state}
+                    postcode={userData.location.postcode}
+                  />
+                }
+              />
               <Route path="DashBoard" element={<DashBoard />} />
             </Routes>
           )}

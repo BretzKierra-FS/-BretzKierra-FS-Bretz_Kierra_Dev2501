@@ -32,7 +32,7 @@ const Form = (props) => {
           ></Button>
         </form>
         <div style={styles.newPostBottom}>
-          <MyAvatar AvatarIcon={props.avatar} />
+          <MyAvatar AvatarIcon={AvatarIcon} />
           <p>Whats on your mind, Kierra?</p>
         </div>
       </div>
