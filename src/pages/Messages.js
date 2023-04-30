@@ -44,7 +44,7 @@ const styles = {
     backgroundColor: '#F0F6F6',
     marginLeft: '4rem',
     widthMin: '15%',
-    height: '100%',
+    height: '50%',
     borderRadius: '.75rem',
     alignItems: 'center',
     paddingRight: '.5rem',
@@ -54,4 +54,5 @@ const styles = {
     margin: '1rem',
     color: '#F0F6F6',
   },
+
 };

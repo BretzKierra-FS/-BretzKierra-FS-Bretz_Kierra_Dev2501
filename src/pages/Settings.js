@@ -11,7 +11,7 @@ function Settings(props) {
         userName={props.userName}
         phone={props.phone}
         password={props.password}
-        streetNumber={props.steet}
+        streetNumber={props.streetNumber}
         streetName={props.streetName}
         city={props.city}
         state={props.state}
@@ -27,6 +27,5 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     height: '100vh',
-    width: '99vh',
   },
 };

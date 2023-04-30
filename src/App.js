@@ -60,7 +60,7 @@ function App() {
                     firstName={userData.name.first}
                     lastName={userData.name.last}
                     userName={userData.login.username}
-                    phone={userData.registered.phone}
+                    phone={userData.phone}
                     password={userData.login.password}
                     streetNumber={userData.location.street.number}
                     streetName={userData.location.street.name}
