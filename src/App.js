@@ -13,7 +13,8 @@ import { Route, Routes } from 'react-router-dom';
 import NewsFeed from './pages/NewsFeed';
 import Messages from './pages/Messages';
 import Settings from './pages/Settings';
-import DashBoard from './pages/DashBoard';
+import DashBoard from './pages/Dashboard';
+// import DashBoard from './pages/DashBoard';
 
 function App() {
   let [color, setColor] = useState('#FFA3D1');

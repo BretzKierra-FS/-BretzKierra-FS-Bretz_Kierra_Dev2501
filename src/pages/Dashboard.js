@@ -13,16 +13,16 @@ function DashBoard() {
   return (
     <main style={styles.container}>
       <h1 style={styles.chartTitle}>Dashboard</h1>
-      <p style={styles.chartsContainer}>
+      <div style={styles.chartsContainer}>
         {chart.map((chart, id) => (
           <Chart1 key={id} id={id} chart={chart} />
         ))}
-      </p>
-      <p>
+      </div>
+      <div>
         {viewChart.map((viewChart, id) => (
           <Chart2 key={id} id={id} viewChart={viewChart} />
         ))}
-      </p>
+      </div>
     </main>
   );
 }
