@@ -5,3 +5,8 @@
 ### Interface Programming
 ### April 2023
 
+This repo is for a class project feel free to explore.
+
+# Instructions
+npm install
+npm start 
