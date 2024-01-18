@@ -7,6 +7,8 @@
 
 This repo is for a class project feel free to explore.
 
+Please use branches to view changes.
+
 # Instructions
 npm install
 npm start 
